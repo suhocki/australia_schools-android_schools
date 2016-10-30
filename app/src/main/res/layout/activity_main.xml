@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contextClickable="true"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#E9E9E9"
+        android:contextClickable="true">
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#e9e9e9"
+            android:contextClickable="false"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/background" />
+
+        <LinearLayout
+            android:id="@+id/fullLayoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contextClickable="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="0dp"
+                android:background="@color/color_yellow"
+                android:contextClickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.2"
+                    android:src="@drawable/logo_main_screen"
+                    android:contextClickable="false"
+                    android:scaleType="fitCenter"
+                    android:layout_marginLeft="5dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/logo_text"
+                    android:contextClickable="false"
+                    android:layout_marginRight="17dp"
+                    android:scaleType="fitStart"
+                    android:layout_marginLeft="-5dp"
+                    tools:scaleType="fitCenter" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="17dp"
+                    android:layout_weight="2"
+                    android:contextClickable="false"
+                    android:scaleType="fitEnd"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contextClickable="true"
+                android:fillViewport="true"
+                android:focusable="false"
+                android:scrollIndicators="none"
+                android:scrollbarSize="0dp"
+                android:scrollbarFadeDuration="0"
+                android:scrollbarDefaultDelayBeforeFade="0"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/linOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contextClickable="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:contextClickable="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linAlerts"
+                        android:layout_width="match_parent"
+                        android:background="@color/color_dark_blue"
+                        android:contextClickable="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_height="@dimen/menu">
+
+                        <ImageView
+                            android:id="@+id/ivAlertsIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:src="@drawable/alerts"
+                            android:contextClickable="false"
+                            android:padding="12dp"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvAlerts"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:gravity="left|center"
+                            android:text="Quick announcements"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/color_white"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btnAlertsMessages"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/message_inactive"
+                            android:contextClickable="true"
+                            android:padding="5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_gravity="center"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:id="@+id/ivAlertsArrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="17dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/arrow_right"
+                            android:scaleType="fitEnd" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:contextClickable="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linEvents"
+                        android:layout_width="match_parent"
+                        android:background="@color/color_purple"
+                        android:contextClickable="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_height="@dimen/menu">
+
+                        <ImageView
+                            android:id="@+id/ivEventsIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/events"
+                            android:padding="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvEvents"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:gravity="left|center"
+                            android:text="Events"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/color_white"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btnEventsMessages"
+                            android:layout_gravity="center"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/message_active"
+                            android:contextClickable="true"
+                            android:padding="5dp"
+                            android:src="@drawable/message_inactive"
+                            android:textColor="#ffffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:visibility="invisible"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:text="8" />
+
+                        <ImageView
+                            android:id="@+id/ivEventsArrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="17dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/arrow_right"
+                            android:scaleType="fitEnd" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:contextClickable="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linNews"
+                        android:layout_width="match_parent"
+                        android:background="@color/color_yellow"
+                        android:contextClickable="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_height="@dimen/menu">
+
+                        <ImageView
+                            android:id="@+id/ivNewsIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/news"
+                            android:padding="12dp"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvNews"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:gravity="left|center"
+                            android:text="News"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/color_white"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btnNewsMessages"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/message_inactive"
+                            android:contextClickable="true"
+                            android:padding="5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_gravity="center"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:id="@+id/ivNewsArrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="17dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/arrow_right"
+                            android:scaleType="fitEnd" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:contextClickable="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linNewsLetters"
+                        android:layout_width="match_parent"
+                        android:background="@color/color_teal"
+                        android:contextClickable="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_height="@dimen/menu">
+
+                        <ImageView
+                            android:id="@+id/ivNewsLettersIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/newsletters"
+                            android:padding="12dp"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvNewsLetters"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:gravity="left|center"
+                            android:text="Newsletters"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/color_white"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btnNewsLettersMessages"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/message_inactive"
+                            android:contextClickable="true"
+                            android:padding="5dp"
+                            android:src="@drawable/message_inactive"
+                            android:textColor="#ffffff"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_gravity="center"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp" />
+
+                        <ImageView
+                            android:id="@+id/ivNewsLettersArrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="17dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/arrow_right"
+                            android:scaleType="fitEnd" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_grey_light"
+                        android:contextClickable="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linParentsInfo"
+                        android:layout_width="match_parent"
+                        android:background="@color/color_grey"
+                        android:contextClickable="true"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        android:layout_height="@dimen/menu">
+
+                        <ImageView
+                            android:id="@+id/ivParentsInfoIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/parentsinfo"
+                            android:padding="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvParentsInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:gravity="left|center"
+                            android:text="Parents info"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/color_white"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btnParentsInfoMessages"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/message_inactive"
+                            android:contextClickable="true"
+                            android:padding="5dp"
+                            android:src="@drawable/message_inactive"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/ivParentsInfoArrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="17dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/arrow_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/white"
+                        android:contextClickable="true"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linParentsMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contextClickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/linPar1"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:layout_height="@dimen/menu">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible"
+                                android:padding="12dp"
+                                android:layout_marginLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/tvPar1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/caldroid_555"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black"
+                                android:scaleType="fitEnd" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar2"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:layout_height="@dimen/menu">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible"
+                                android:padding="12dp"
+                                android:layout_marginLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/tvPar2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/caldroid_555"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black"
+                                android:scaleType="fitEnd" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar3"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:layout_height="@dimen/menu">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible"
+                                android:padding="12dp"
+                                android:layout_marginLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/tvPar3"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/caldroid_555"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black"
+                                android:scaleType="fitEnd" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar4"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:layout_height="@dimen/menu">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible"
+                                android:padding="12dp"
+                                android:layout_marginLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/tvPar4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/caldroid_555"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black"
+                                android:scaleType="fitEnd" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar5"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/tvPar5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar6"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/tvPar6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar7"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/tvPar7"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar8"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_grey_parents"
+                            android:contextClickable="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="12dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/parentsinfo"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/tvPar8"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@color/color_grey_parents"
+                                android:clickable="false"
+                                android:contextClickable="false"
+                                android:gravity="left|center_vertical"
+                                android:text="title"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="#000000"
+                                android:textIsSelectable="false"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="0dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/message_inactive"
+                                android:contextClickable="true"
+                                android:padding="5dp"
+                                android:src="@drawable/message_inactive"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="17dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="2"
+                                android:contextClickable="false"
+                                android:src="@drawable/arrow_black" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar9"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contextClickable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvPar9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left|bottom"
+                                    android:layout_margin="0dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:gravity="left"
+                                    android:text="Medium Text"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textIsSelectable="false"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="0dp"
+                                    android:layout_marginRight="5dp"
+                                    android:contextClickable="false"
+                                    android:padding="17dp"
+                                    android:src="@drawable/arrow_black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#171717"
+                                android:contextClickable="true"
+                                android:gravity="bottom"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linPar10"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contextClickable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvPar10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left|bottom"
+                                    android:layout_margin="0dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:contextClickable="false"
+                                    android:gravity="left"
+                                    android:text="Medium Text"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textIsSelectable="false"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="17dp"
+                                    android:layout_marginRight="5dp"
+                                    android:contextClickable="false"
+                                    android:src="@drawable/arrow_black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#171717"
+                                android:contextClickable="true"
+                                android:gravity="bottom"
+                                android:orientation="vertical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/white"
+                            android:contextClickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone"></LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linContactUs"
+                        android:layout_width="match_parent"
+                        android:background="@color/color_white"
+                        android:contextClickable="true"
+                        android:orientation="horizontal"
+                        android:layout_height="@dimen/menu">
+
+                        <ImageView
+                            android:id="@+id/ivContactUsIcon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/contactus"
+                            android:padding="12dp"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:id="@+id/tvContactUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:contextClickable="false"
+                            android:gravity="left|center"
+                            android:text="Contacts us"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/caldroid_555"
+                            android:textIsSelectable="false"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/message_inactive"
+                            android:contextClickable="true"
+                            android:padding="5dp"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:id="@+id/btnContactUsMessages" />
+
+                        <ImageView
+                            android:id="@+id/ivContactUsArrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="17dp"
+                            android:layout_weight="2"
+                            android:contextClickable="false"
+                            android:src="@drawable/arrow_black"
+                            android:scaleType="fitEnd" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_grey_parents"
+                android:contextClickable="true"
+                android:orientation="vertical"></LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu"
+                android:background="@color/color_white"
+                android:contextClickable="true"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/btnHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="false"
+                    android:background="@color/color_white"
+                    android:contextClickable="false"
+                    android:padding="@dimen/bottom_bar"
+                    android:src="@drawable/home_active" />
+
+                <ImageView
+                    android:id="@+id/btnAlerts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_white"
+                    android:contextClickable="false"
+                    android:padding="@dimen/bottom_bar"
+                    android:src="@drawable/alerts_inactive" />
+
+                <ImageView
+                    android:id="@+id/btnFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_white"
+                    android:contextClickable="false"
+                    android:padding="@dimen/bottom_bar"
+                    android:src="@drawable/feed_inactive" />
+
+                <ImageView
+                    android:id="@+id/btnCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_white"
+                    android:contextClickable="false"
+                    android:padding="@dimen/bottom_bar"
+                    android:src="@drawable/calendar_inactive" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

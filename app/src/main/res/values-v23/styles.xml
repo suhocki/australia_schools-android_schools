@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="HomeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+                <item name="colorPrimary">@color/color_grey_light</item>
+                <item name="colorPrimaryDark">@color/color_grey_light</item>
+                <item name="colorAccent">@color/color_grey_light</item>
+                <item name="android:windowAnimationStyle">@null</item>
+                <item name="android:windowLightStatusBar">true</item>
+        </style>
+
+        <style name="ContactUsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+                <item name="colorPrimary">@color/color_white</item>
+                <item name="colorPrimaryDark">@color/color_white</item>
+                <item name="colorAccent">@color/color_white</item>
+                <item name="android:windowAnimationStyle">@null</item>
+                <item name="android:windowLightStatusBar">true</item>
+
+        </style>
+
+</resources>

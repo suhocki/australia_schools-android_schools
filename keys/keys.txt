@@ -1,0 +1,8 @@
+keystore pass:
+BalinaSoft
+allias:
+com.balinasoft.lcps
+password:
+YbSk2dKc6T
+
+com.balinasoft.lcps
