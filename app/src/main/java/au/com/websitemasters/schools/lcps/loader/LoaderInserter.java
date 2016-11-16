@@ -642,10 +642,13 @@ public class LoaderInserter extends Loader<Bitmap> {
                     Log.d("rklogs", "//mark like a Deleted");
 
                     //category now is DELETED
-                    ContentValues cv = new ContentValues();
-                    cv.put("DELETED", c.getString(categoryIndex));
-                    db.update("mytable", cv, "id = ?", new String[]{
-                            Integer.toString(c.getInt(idColIndex))});
+//                    ContentValues cv = new ContentValues();
+//                    cv.put("DELETED", c.getString(categoryIndex));
+//                    db.update("mytable", cv, "id = ?", new String[]{
+//                            Integer.toString(c.getInt(idColIndex))});
+                    int delCount = db.delete("mytable", "id = " + c.getInt(idColIndex), null);
+                    Log.d("rklogs", "deleted rows count = " + delCount);
+
                     c.close();
                     db.close();
                     dbHelper.close();

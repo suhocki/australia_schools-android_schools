@@ -29,6 +29,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                 + "pdf text,"
                 + "url_full_news text,"
                 + "serverId text"
+//                + "DELETED"
                 + ");");
     }
 
